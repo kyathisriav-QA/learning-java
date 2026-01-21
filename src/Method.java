@@ -1,32 +1,34 @@
-class Task {
-    public static void main(String[] args) {
-        String Title = "Calculations";
-        System.out.println(Title);
-        Addition();            ///Method calling
-        Substraction();
-        Multiplication();
-        Division();
-        Modulodivision();
+class StudentConstructor {
+    String name;
+    int age;
+    int RollNo;
+    StudentConstructor(String s,int a, int r){
+        name = s;
+        age = a;
+        RollNo = r;
     }
-    public static void Addition() {  /// method defining
-        int a = 3, b = 9;
-        System.out.println(a+b);
-    }
-    public static void Substraction() {
-        int a = 12, b = 10;
-        System.out.println(a-b);
-    }
-    public static void Multiplication() {
-        int a = 45, b = 21;
-        System.out.println(a*b);
-    }
-    public static void Division() {
-        int a = 856, b = 8;
-        System.out.println(a/b);
-    }
-    public static void Modulodivision() {
-        int a = 40, b = 3;
-        System.out.println(a%b);
-    }
+}
 
+class Constructor {
+    public static void main(String[] args) {
+        StudentConstructor s1 = new StudentConstructor("Neeraja", 23, 100);
+        StudentConstructor s2 = new StudentConstructor("Kyathi", 24, 101);
+        StudentConstructor s3 = new StudentConstructor("Salma", 25, 102);
+        StudentConstructor s4 = new StudentConstructor("Priya", 26, 103);
+
+        ///Setting values separately - tedious!
+        ///s1.name = "Neeraja";
+        ///s1.age = 22;
+
+        ///s2.name = "Priya";
+        ///s2.age = 21;
+
+        ///s3.name = "Rahul";
+        ///s3.age = 23;
+
+        System.out.println(s1.name + " - " + s1.age + " - " + s1.RollNo);
+        System.out.println(s2.name + " - " + s2.age + " - " + s2.RollNo);
+        System.out.println(s3.name + " - " + s3.age + " - " + s3.RollNo);
+        System.out.println(s4.name + " - " + s3.age + " - " + s4.RollNo);
+    }
 }
